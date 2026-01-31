@@ -192,7 +192,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+   <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
@@ -202,29 +202,44 @@
                 </div>
                 <div class="col-lg-6">
                     <p class="section-title bg-white text-start text-primary pe-3">About Us</p>
-                    <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">Join Hands, Change the World</h1>
-                    <p class="mb-4 wow fadeIn" data-wow-delay="0.3s">Every hand extended in kindness brings us closer to
-                        a world free from suffering. Be part of a global movement dedicated to building a future where
-                        equality and compassion thrive.</p>
+                    <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">Empowering Lives, Enriching Futures</h1>
+                    <p class="mb-4 wow fadeIn" data-wow-delay="0.3s">
+                        We are Major Support Services, your dedicated provider of disability support services, extending
+                        our assistance to all NDIS participants.Our mission is to create a nurturing environment for 
+                        NDIS participants, where they receive comprehensive
+                        support to foster personal and professional development.
+                    </p>
                     <div class="row g-4 pt-2">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                             <div class="h-100">
                                 <h3>Our Mission</h3>
-                                <p>Our mission is to uplift underprivileged communities by providing resources,
-                                    education, and tools for growth.</p>
-                                <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>No one should go to
+                                <p>Our core mission is to craft and provide secure, inclusive, and cutting-edge solutions tailored to our clients.
+                                     We employ a client-centric methodology to reach predefined objectives,
+                                      consistently aiming for the highest levels of satisfaction.
+                                </p>
+                                <!-- <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>No one should go to
                                     bed hungry.</p>
                                 <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>We spread kindness and
                                     support.</p>
                                 <p class="text-dark mb-0"><i class="fa fa-check text-primary me-2"></i>We can change
-                                    someone’s life.</p>
+                                    someone’s life.</p> -->
                             </div>
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="h-100 bg-primary p-4 text-center">
-                                <p class="fs-5 text-dark">Through your donations, we spread kindness and support to
-                                    children and families.</p>
-                                <a class="btn btn-secondary py-2 px-4" href="#!">Donate Now</a>
+                            <div class="h-100">
+                                <h3>Our Vision</h3>
+                                <p>Our vision is to become a beacon of inspiration in the disability support
+                                    industry, where every individual's potential is nurtured, their
+                                    dreams are realized, and their path to a brighter future
+                                    is illuminated by our unwavering commitment to care, 
+                                    inclusivity, and innovation.
+                                </p>
+                                <!-- <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>No one should go to
+                                    bed hungry.</p>
+                                <p class="text-dark"><i class="fa fa-check text-primary me-2"></i>We spread kindness and
+                                    support.</p>
+                                <p class="text-dark mb-0"><i class="fa fa-check text-primary me-2"></i>We can change
+                                    someone’s life.</p> -->
                             </div>
                         </div>
                     </div>
@@ -236,7 +251,7 @@
 
 
     <!-- Banner Start -->
-    <div class="container-fluid banner py-5">
+    <!-- <div class="container-fluid banner py-5">
         <div class="container">
             <div class="banner-inner bg-light p-5 wow fadeIn" data-wow-delay="0.1s">
                 <div class="row justify-content-center">
@@ -254,7 +269,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Banner End -->
 
 
@@ -309,14 +324,235 @@
                     <p class="text-dark wow fadeIn" data-wow-delay="0.6s"><i
                             class="fa fa-check text-primary me-2"></i>Clita erat ipsum et lorem et sit</p>
                     <div class="d-flex mt-4 wow fadeIn" data-wow-delay="0.7s">
-                        <a class="btn btn-primary py-3 px-4 me-3" href="#!">Donate Now</a>
-                        <a class="btn btn-secondary py-3 px-4" href="#!">Join Us Now</a>
+                        <a href="#" class="btn btn-primary rounded-pill px-5 py-3" data-bs-toggle="modal" data-bs-target="#referralModal">
+                            <i class="fa fa-user-plus me-2"></i>Refer someone now !
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Features End -->
+
+
+     <!-- Donate Modal Start -->
+    <div class="modal fade" id="referralModal" tabindex="-1" aria-labelledby="referralModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 900px;">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header bg-primary text-white rounded-top-4">
+                    <h5 class="modal-title" id="referralModalLabel"><i class="fa fa-heart me-2"></i>Referral <Form:post></Form:post></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <form>
+                        <div class="mb-3">
+                            <label for="donorName" class="form-label">Who is the referrer?</label>
+                            <div class="input-group">
+                                <select class="form-select rounded-pill" onchange="this.options[0].hidden = true;">
+                                    <option value="" selected disabled hidden>Select referrer</option>
+                                    <option value="self">Self</option>
+                                    <option value="friend">Friend</option>
+                                    <option value="family">Family</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Do you have consent from the person that you are referring or their representative to share the information in this form?</label>
+                            <div class="form-check">
+                                <input class="form-check-input rounded-pill" type="radio" name="consent" id="consentYes" value="yes">
+                                <label class="form-check-label" for="consentYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input rounded-pill" type="radio" name="consent" id="consentNo" value="no">
+                                <label class="form-check-label" for="consentNo">No</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donorEmail" class="form-label">Referrers Name. This section is for the referrers details<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control rounded-pill" id="donorEmail" placeholder="Referrers Name">
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="referrerName1" class="form-label">Referrer's Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control rounded-pill" id="referrerName1" placeholder="Referrer's Email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="referrerName2" class="form-label">Referrer's Phone <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName2" placeholder="Referrer's Phone" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">What services are you interested in?<span class="text-danger">*</span></label>
+                            <div class="row">
+                                <!-- First column -->
+                                <div class="col-12 col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service1" value="food">
+                                        <label class="form-check-label" for="service1">Plan Management</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service2" value="health">
+                                        <label class="form-check-label" for="service2">Household tasks</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service3" value="education">
+                                        <label class="form-check-label" for="service3">Daily tasks/shared living</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service4" value="housing">
+                                        <label class="form-check-label" for="service4">Assist-life stage transition</label>
+                                    </div>
+                                </div>
+                                <!-- Second column -->
+                                <div class="col-12 col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service5" value="transport">
+                                        <label class="form-check-label" for="service5">Group Centre Activities</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service6" value="other">
+                                        <label class="form-check-label" for="service6">Development life skills</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service7" value="other">
+                                        <label class="form-check-label" for="service7">Assist-travel/transport</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service8" value="other">
+                                        <label class="form-check-label" for="service8">Accomodation/tenancy</label>
+                                    </div>
+                                </div>
+                                <!-- Third column -->
+                                <div class="col-12 col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service9" value="other">
+                                        <label class="form-check-label" for="service9">Community Participation</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service10" value="other">
+                                        <label class="form-check-label" for="service10">Innovative Community</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" name="services" id="service11" value="other">
+                                        <label class="form-check-label" for="service11">Assist personal</label>
+                                    </div>
+                                    <div class="form-check mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h3 class="mb-3">Participant Details</h3>
+                            <p>This is for the person who is being referred</p>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="referrerName1" class="form-label"><b>Last Name</b><span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName1" placeholder="Last Name" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="referrerName2" class="form-label"><b>First Name</b><span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName2" placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="referrerName3" class="form-label">Mobile Number</label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName3" placeholder="Mobile Number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h4 class="mb-3">Address</h4>
+                            <div class="form-group">
+                                <label for="donorEmail" class="form-label">Street Address</label>
+                                <input type="text" class="form-control rounded-pill" id="donorEmail" placeholder="Street Address">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="donorEmail2" class="form-label">Address Line 2</label>
+                                <input type="text" class="form-control rounded-pill" id="donorEmail2" placeholder="Address Line 2">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="referrerName1" class="form-label">City</label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName1" placeholder="City" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="referrerName2" class="form-label">State/ Province/ Region</label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName2" placeholder="State/ Province/ Region" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="referrerName1" class="form-label">ZIP / Postal Code</label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName1" placeholder="ZIP / Postal Code" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="referrerName2" class="form-label">Country</label>
+                                    <input type="text" class="form-control rounded-pill" id="referrerName2" placeholder="Country" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="donorEmail" class="form-label">Additional Information</label>
+                                <input type="date" class="form-control rounded-pill" id="donorDate">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donorName" class="form-label">Who is the referrer?</label>
+                            <div class="input-group">
+                                <select class="form-select rounded-pill" id="donorName" onchange="this.options[0].hidden = true;">
+                                    <option value="" selected disabled hidden>Choose Gender</option>
+                                    <option value="F">Female</option>
+                                    <option value="M">Male</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donorMessage" class="form-label">Reason for referral</label>
+                            <textarea class="form-control rounded-2" id="donorMessage" rows="2" placeholder="State your referral reason"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="donorMessage" class="form-label"><b>What are the person's support needs? Kindly share any requirements that should 
+                                be known to us, for instance - male/female support workers or
+                                identifying any behaviour of concerns if applicable. This to ensure that the support worker or therapist is assigned 
+                                according to the requirements.</b>
+                            </label>
+                            <textarea class="form-control rounded-2" id="donorMessage" rows="2" placeholder="State your referral reason"></textarea>
+                        </div>
+                        <h3 class="mb-3">NDIS Information</h3>
+                        <div class="mb-3">
+                            <label class="form-label">Is the referred a participant of the National Disability Insurance?</label>
+                            <div class="form-check">
+                                <input class="form-check-input rounded-pill" type="radio" name="consent" id="consentYes" value="yes">
+                                <label class="form-check-label" for="consentYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input rounded-pill" type="radio" name="consent" id="consentNo" value="no">
+                                <label class="form-check-label" for="consentNo">No</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input rounded-pill" type="radio" name="consent" id="consentUnsure" value="consentUnsure">
+                                <label class="form-check-label" for="consentUnsure">Unsure</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill py-3 mt-3">
+                            <i class="fa fa-paper-plane me-2"></i>Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Donate Modal End -->
 
 
     <!-- Team Start -->
