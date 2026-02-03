@@ -243,145 +243,31 @@
                            <nav class="it-menu-content">
                               <ul>
                                  <li class="has-dropdown-2 p-static">
-                                    <a href="index.html">Home</a>   
-                                    <div class="it-submenu submenu has-home-img">
-                                       <div class="it-homemenu-wrapper">
-                                          <div class="row gx-6 row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-5">
-                                             <div class="col home-img">
-                                                <div class="home-img-thumb home-img-overly mb-20">
-                                                   <img src="static/img/menu/home-1.jpg" alt>
-                                                   <div class="home-img-btn">
-                                                      <a class="it-btn-sm" href="index.html">
-                                                         <span class="text-one">Multi Page</span>
-                                                      </a>
-                                                      <a class="it-btn-sm" href="index-one-page.html">
-                                                         <span class="text-one">One Page</span>
-                                                      </a>
-                                                   </div>
-                                                </div>
-                                                <div class="home-img-content text-center">
-                                                   <h4 class="home-img-title">
-                                                      <a href="index.html">Home 01</a>
-                                                   </h4>
-                                                </div>
-                                             </div>
-                                             <div class="col home-img">
-                                                <div class="home-img-thumb home-img-overly mb-20">
-                                                   <img src="static/img/menu/home-2.jpg" alt>
-                                                   <div class="home-img-btn">
-                                                      <a class="it-btn-sm" href="index-2.html">
-                                                         <span class="text-one">Multi Page</span>
-                                                      </a>
-                                                      <a class="it-btn-sm" href="index-2-one-page.html">
-                                                         <span class="text-one">One Page</span>
-                                                      </a>
-                                                   </div>
-                                                </div>
-                                                <div class="home-img-content text-center">
-                                                   <h4 class="home-img-title">
-                                                      <a href="index-2.html">Home 02</a>
-                                                   </h4>
-                                                </div>
-                                             </div>
-                                             <div class="col home-img">
-                                                <div class="home-img-thumb home-img-overly mb-20">
-                                                   <img src="static/img/menu/home-3.jpg" alt>
-                                                   <div class="home-img-btn">
-                                                      <a class="it-btn-sm" href="index-3.html">
-                                                         <span class="text-one">Multi Page</span>
-                                                      </a>
-                                                      <a class="it-btn-sm" href="index-3-one-page.html">
-                                                         <span class="text-one">One Page</span>
-                                                      </a>
-                                                   </div>
-                                                </div>
-                                                <div class="home-img-content text-center">
-                                                   <h4 class="home-img-title">
-                                                      <a href="index-3.html">Home 03</a>
-                                                   </h4>
-                                                </div>
-                                             </div>
-                                             <div class="col home-img">
-                                                <div class="home-img-thumb home-img-overly mb-20">
-                                                   <img src="static/img/menu/home-4.jpg" alt>
-                                                   <div class="home-img-btn">
-                                                      <a class="it-btn-sm" href="index-4.html">
-                                                         <span class="text-one">Multi Page</span>
-                                                      </a>
-                                                      <a class="it-btn-sm" href="index-4-one-page.html">
-                                                         <span class="text-one">One Page</span>
-                                                      </a>
-                                                   </div>
-                                                </div>
-                                                <div class="home-img-content text-center">
-                                                   <h4 class="home-img-title">
-                                                      <a href="index-4.html">Home 04</a>
-                                                   </h4>
-                                                </div>
-                                             </div>
-                                             <div class="col home-img">
-                                                <div class="home-img-thumb home-img-overly mb-20">
-                                                   <img src="static/img/menu/home-5.jpg" alt>
-                                                   <div class="home-img-btn">
-                                                      <a class="it-btn-sm" href="index-5.html">
-                                                         <span class="text-one">Multi Page</span>
-                                                      </a>
-                                                      <a class="it-btn-sm" href="index-5-one-page.html">
-                                                         <span class="text-one">One Page</span>
-                                                      </a>
-                                                   </div>
-                                                </div>
-                                                <div class="home-img-content text-center">
-                                                   <h4 class="home-img-title">
-                                                      <a href="index-5.html">Home 05</a>
-                                                   </h4>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>              
+                                    <a href="{{ url_for('index.dashboard') }}">Home</a>               
                                  </li>
                                  <li class="has-dropdown-2">
                                     <a href="#">Pages</a> 
                                     <ul class="it-submenu submenu">
-                                       <li><a href="team-v1.html">Team V.1</a></li>
-                                       <li><a href="team-v2.html">Team V.2</a></li>
-                                       <li><a href="team-details.html">Team Details</a></li>
-                                       <li><a href="portfolio.html">Portfolio</a></li>
-                                       <li><a href="portfolio-details.html">Portfolio Details</a></li>
+                                       <li><a href="{{ url_for('team.index') }}">Team</a></li>
+                                       <li><a href="{{ url_for('portfolio.index') }}">Portfolio</a></li>
                                        <li><a href="faq.html">Faq</a></li>
                                        <li><a href="404.html">Error</a></li>
                                     </ul>                                              
                                  </li>
                                  <li class="has-dropdown-2">
-                                    <a href="about-us-v1.html">About</a>  
-                                    <ul class="it-submenu submenu">
-                                       <li><a href="about-us-v1.html">About Us V.1</a>
-                                       </li>
-                                       <li><a href="about-us-v2.html">About Us V.2</a></li>
-                                    </ul>                                            
+                                    <a href="{{ url_for('about.index') }}">About</a>                                            
                                  </li>
                                  <li class="has-dropdown-2">
-                                    <a href="service-v1.html">Service</a>                                            
-                                    <ul class="it-submenu submenu">
-                                       <li><a href="service-v1.html">Service V.1</a></li>
-                                       <li><a href="service-v2.html">Service V.2</a></li>
-                                       <li><a href="service-v3.html">Service V.3</a></li>
-                                       <li><a href="service-details.html">Service Details</a></li>
-                                    </ul>   
+                                    <a href="{{ url_for('service.index') }}">Service</a>                                            
                                  </li>
                                  <li class="has-dropdown-2">
-                                    <a href="blog.html">Blog</a> 
+                                    <a href="{{ url_for('blog.index') }}">Blog</a> 
                                     <ul class="it-submenu submenu">
-                                       <li><a href="blog.html">Blog List</a></li>
-                                       <li><a href="blog-list-left-sidebar.html">Blog Left Sidebar</a></li>
-                                       <li><a href="blog-list-right-sidebar.html">Blog Right Sidebar</a></li>
-                                       <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                                       <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
+                                       <li><a href="{{ url_for('blog.index') }}">Blog List</a></li>
                                     </ul>                                             
                                  </li>                               
                                  <li>
-                                    <a href="contact.html">Contact</a>                                            
+                                    <a href="{{ url_for('contact.index') }}">Contact</a>                                            
                                  </li>
                               </ul>
                            </nav>

@@ -58,12 +58,13 @@
   --it-common-white: #ffffff;
   --it-common-black: #1F0723;
   --it-common-red: #DC1D1C;
+  --it-common-yellow: #eeee17;;
   --it-heading-primary: #1F0723;
   --it-gray-1: #F2EBE9;
   --it-gray-2: #F3F3F3;
   --it-gray-3: #F2F6F9;
   --it-text-body: #5E5F62;
-  --it-theme-1: #011D4E;
+  --it-theme-1: #a91596;
 }
 
 @media (min-width: 1400px) {
@@ -518,8 +519,8 @@ input[type=color] {
   text-align: center;
   transition: 0.4s;
   text-transform: capitalize;
-  color: var(--it-common-white);
-  background-color: var(--it-common-red);
+  color: var(--it-common-black);
+  background-color: var(--it-common-yellow);
 }
 .it-btn-red.black-btn {
   background-color: var(--it-theme-1);
@@ -547,8 +548,8 @@ input[type=color] {
   background-color: var(--it-common-white);
 }
 .it-btn-red.hover-2:hover {
-  color: var(--it-common-white);
-  background-color: var(--it-theme-1);
+  color: var(--it-common-black);
+  background-color: var(--it-common-yellow);
 }
 .it-btn-sm {
   font-weight: 500;
@@ -2213,7 +2214,7 @@ body.it-magic-cursor #magic-cursor {
   font-size: 18px;
   display: inline-block;
   margin-bottom: 20px;
-  color: var(--it-common-red);
+  color: var(--it-common-black);
   font-family: var(--it-ff-plus-jakarta);
 }
 @media (max-width: 767px) {
@@ -6207,7 +6208,7 @@ body.it-magic-cursor #magic-cursor {
   }
 }
 .it-service-item:hover {
-  background-color: var(--it-common-red);
+  background-color: var(--it-theme-1);
 }
 .it-service-item:hover .it-service-title {
   color: var(--it-common-white);
@@ -7218,7 +7219,7 @@ body.it-magic-cursor #magic-cursor {
   color: var(--it-common-white);
 }
 .it-testimonial-author-info span {
-  color: var(--it-common-red);
+  color: var(--it-common-white);
 }
 .it-testimonial-active {
   margin: 0 -330px;
@@ -7405,12 +7406,12 @@ body.it-magic-cursor #magic-cursor {
   opacity: 1;
   margin: 0px 6px;
   transition: 0.3s;
-  background-color: var(--it-theme-1);
+  background-color: var(--it-common-red);
   position: relative;
 }
 .it-testimonial-dots .swiper-pagination-bullet-active {
   width: 34px;
-  background-color: var(--it-common-red);
+  background-color: var(--it-common-yellow);
 }
 
 .it-testimonial-3-area .it-section-title-3 {
