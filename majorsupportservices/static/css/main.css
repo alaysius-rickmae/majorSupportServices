@@ -551,8 +551,8 @@ input[type=color] {
   background-color: var(--it-common-white);
 }
 .it-btn-red.hover-2:hover {
-  color: var(--it-common-black);
-  background-color: var(--it-common-yellow);
+  color: var(--it-common-white);
+  background-color: var(--it-common-blue);
 }
 .it-btn-sm {
   font-weight: 500;
@@ -572,8 +572,8 @@ input[type=color] {
   }
 }
 .it-btn-sm:hover {
-  color: var(--it-common-white);
-  background-color: var(--it-theme-1);
+  color: var(--it-common-black);
+  background-color: var(--it-common-yellow);
 }
 .it-btn-sm.theme-bg {
   background-color: var(--it-theme-1);
