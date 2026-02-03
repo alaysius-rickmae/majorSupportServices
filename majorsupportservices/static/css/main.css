@@ -1247,7 +1247,7 @@ input[type=color] {
   }
 }
 .itoffcanvas__info-address a:hover {
-  color: var(--it-common-red);
+  color: var(--it-common-white);
 }
 .itoffcanvas .it-homemenu-wrapper {
   padding: 0;
@@ -5715,7 +5715,6 @@ body.it-magic-cursor #magic-cursor {
   height: 25px;
   line-height: 21px;
   text-align: center;
-  
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .it-menu-mobile ul li.has-dropdown-2 > a .dropdown-toggle-btn i,

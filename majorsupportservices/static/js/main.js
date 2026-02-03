@@ -135,6 +135,7 @@
 			let arrowBtn = document.createElement("BUTTON");
 			arrowBtn.classList.add("dropdown-toggle-btn");
 			arrowBtn.innerHTML = "<i class='fal fa-angle-right'></i>";
+			arrowBtn.style.display = 'none';
 			self.append(function () {
 				return arrowBtn;
 			});
