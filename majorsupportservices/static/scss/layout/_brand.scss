@@ -1,0 +1,87 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  04. brand css start
+/*----------------------------------------*/
+.it-brand {
+    &-wrap {
+        margin-top: -190px;
+        padding: 110px 70px;
+        border-radius: 10px;
+        background: var(--it-common-white);
+        box-shadow: 0 16px 40px 0 rgba(15, 2, 17, 0.1);
+        @media #{$md}{
+            padding: 110px 30px;
+        }
+        @media #{$xs}{
+            padding: 70px 15px;
+        }
+    }
+    &-top-box {
+        line-height: 0;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: inline-block;
+            background-color: #F2EBE9;
+            transform: translateY(-20px);
+            @media #{$xs}{
+                display: none;
+            }
+            @media #{$sm}{
+                display: block;
+            }
+        }
+        & span {
+            font-weight: 500;
+            font-size: 16px;
+            padding: 8px 55px;
+            border-radius: 100px;
+            line-height: 1;
+            z-index: 1;
+            position: relative;
+            display: inline-block;
+            font-family: var(--it-ff-plus-jakarta);
+            background-color: #F2EBE9;
+            color: var(--it-common-red);
+            @media #{$md}{
+                font-size: 14px;
+                padding: 4px 25px;
+            }
+            @media #{$xs}{
+                font-size: 12px;
+                line-height: 1.4;
+                padding: 4px 15px;
+            }
+        }
+    }
+    &-active{
+        & .swiper-slide{
+            width: auto;
+        }
+    }
+    &-style-2 {
+        padding: 107px 0;
+        position: relative;
+        @media #{$md,$xs}{
+            margin-top: 0;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 100%;
+            height: 1px;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 0%, #fff 50%, rgba(255, 255, 255, 0) 100%);
+            opacity: .2;
+            @media #{$md,$xs}{
+                display: none;
+            }
+        }
+    }
+}

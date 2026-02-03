@@ -1,0 +1,117 @@
+@use '../utils' as *;
+
+.it-breadcrumb {
+    &-ptb {
+        padding: 171px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @media #{$xxl}{
+            padding: 150px 0;
+        }
+        @media #{$xl}{
+            padding: 140px 0;
+        }
+        @media #{$lg}{
+            padding: 120px 0;
+        }
+        @media #{$md}{
+            padding: 100px 0;
+        }
+        @media #{$xs}{
+            padding: 70px 0;
+        }
+        @media #{$sm}{
+            padding: 90px 0;
+        }
+    }
+    &-overlay {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: rgba(1, 29, 78, 0.8);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: none;
+            background: linear-gradient(268deg, rgba(1, 29, 78, 0.6) 0%, rgba(1, 29, 78, 0.6) 100%);
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 45px;
+        text-transform: capitalize;
+        color: var(--it-common-white);
+        margin-bottom: 21px;    
+        @media #{$lg}{
+            font-size: 38px;
+        } 
+        @media #{$md}{
+            font-size: 40px;
+        } 
+        @media #{$xs}{
+            font-size: 34px;
+            margin-bottom: 10px;
+        } 
+        @media #{$sm}{
+            font-size: 37px;
+        } 
+    }
+    &-list{
+        display: inline-block;
+        border-radius: 30px;
+        & span {
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #fff;
+            text-transform: capitalize;
+            @media #{$lg,$md,$xs}{
+                font-size: 15px;
+            }
+            &.dvdr{
+                margin: 0 21px;
+                color: var(--it-common-white);
+            }
+        }
+        & i {
+            font-weight: 600;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--it-common-red);
+            font-style: normal;
+            text-transform: capitalize;
+            @media #{$lg,$md,$xs}{
+                font-size: 15px;
+            }
+            
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            @media #{$md}{
+                transform: translateY(-50%) scale(.7);
+            }
+            @media #{$xs}{
+                right: -20%;
+                transform: translateY(-50%) scale(.5);
+            }
+        }
+    }
+}
+

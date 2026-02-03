@@ -1,0 +1,51 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  25. value css start
+/*----------------------------------------*/
+
+.it-value {
+    &-title-sm{
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 25px;
+    }
+    &-item {
+        padding: 55px 60px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        @media #{$lg,$md,$xs}{
+            padding: 45px 20px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            z-index: -1;
+            background-color: rgba($color: #011D4E, $alpha: .9);
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 0;
+            color: var(--it-common-white);
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+    &-border {
+        border-top: 1px dashed #5E5F62;
+    }
+    &-area {
+        & .it-section-title {
+            margin-bottom: 20px;
+        }
+    }
+}

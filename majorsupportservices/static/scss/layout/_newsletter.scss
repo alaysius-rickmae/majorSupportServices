@@ -1,0 +1,130 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  17. newsletter css start
+/*----------------------------------------*/
+.it-newsletter {
+    &-title {
+        font-weight: 600;
+        font-size: 35px;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        color: var(--it-common-white);
+        @media #{$md}{
+            font-size: 25px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$xs}{
+            font-size: 25px;
+            margin-bottom: 25px;
+            & br {
+                display: none;
+            }
+        }
+    }
+    &-input {
+        &-box {
+            margin-left: 36px;
+            position: relative;
+            @media #{$xs}{
+                margin-left: 0;
+            }
+            & input {
+                height: 70px;
+                line-height: 70px;
+                padding-left: 35px;
+                padding-right: 80px;
+                border-radius: 10px;
+                background-color: var(--it-common-white);
+                @media #{$lg,$md,$xs}{
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 14px;
+                }
+            }
+        }
+        &-icon {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            & svg {
+                @media #{$lg,$md,$xs}{
+                    width: 20px;
+                }
+            }
+        }
+        &-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            &.it-btn-red {
+                padding: 16px 30px;
+                @media #{$lg,$md}{
+                    padding: 11px 15px;
+                }
+                @media #{$xs}{
+                    padding: 11px 15px;
+                    position: static;
+                    top: 0;
+                    margin-top: 15px;
+                    transform: translateY(0);
+                }
+            }
+
+        }
+    }
+    &-wrap {
+        padding: 58px 75px;
+        border-radius: 10px;
+        background-color: var(--it-common-red);
+        @media #{$xl,$lg}{
+            padding: 58px 45px;
+        }
+        @media #{$md,$xs}{
+            padding: 42px 25px;
+        }
+        & .it-newsletter-title {
+            font-size: 35px;
+            font-family: var(--it-ff-body);
+            @media #{$lg}{
+                font-size: 28px;
+            }
+            @media #{$md}{
+                font-size: 21px;
+            }
+            @media #{$xs}{
+                font-size: 25px;
+            }
+        }
+        & .it-newsletter-input-box {
+            margin-left: 60px;
+            @media #{$lg}{
+                margin-left: 0;
+            }
+            @media #{$md,$xs}{
+                margin-left: 0;
+
+            }
+            & input {
+                padding-left: 25px;
+                padding-right: 200px;
+                @media #{$lg}{
+                    padding-right: 150px;
+                }
+                @media #{$md,$xs}{
+                    padding-right: 150px;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}
+.it-newsletter-wrap .it-newsletter-input-box input{
+    @media #{$xs}{
+        padding-right: 20px;
+    }
+}

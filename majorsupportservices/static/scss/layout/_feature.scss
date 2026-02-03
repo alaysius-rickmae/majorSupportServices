@@ -1,0 +1,109 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. feature css start
+/*----------------------------------------*/
+
+.it-feature {
+    &-wrap {
+        padding: 90px 0;
+        padding-left: 25px;
+        margin-left: 300px;
+        border-left: 18px solid var(--it-common-red);
+        @media #{$xxxl}{
+            margin-left: 140px;
+        }
+        @media #{$xxl}{
+            margin-left: 45px;
+        }
+        @media #{$xl,$lg}{
+            margin-left: 0px;
+            border-left: none;
+            padding-left: 0;
+        }
+        @media #{$md,$xs}{
+            margin-left: 0px;
+            border-left: none;
+            padding-left: 0;
+            padding-bottom: 60px;
+        }
+    }
+    &-item {
+        @media #{$md,$xs}{
+            margin-bottom: 30px;
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: var(--it-common-white);
+    }
+    &-content {
+        & p {
+            margin-bottom: 0;
+            color: var(--it-common-white);
+            @media #{$xxl}{
+                font-size: 14px;
+            }
+            @media #{$xl,$lg,$md,$xs}{
+                font-size: 14px;
+                & br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-icon-box {
+        margin-right: 25px;
+        & .icon {
+            position: absolute;
+            left: 13%;
+            right: 0;
+            top: 42%;
+            text-align: center;
+            transform: translateY(-50%);
+        }
+    }
+
+}
+.it-feature-4 {
+    &-title {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 10px;
+        transition: .3s;
+    }
+    &-icon {
+        transition: .3s;
+        display: inline-block;
+        color: var(--it-common-red);
+    }
+    &-item {
+        padding: 45px 70px 35px 50px;
+        border: 1px solid #f2f4fb;
+        border-radius: 30px;
+        box-shadow: 0 20px 30px 0 rgba(1, 6, 20, 0.1);
+        background: #fff;
+        transition: .3s;
+        @media #{$xl,$lg,$md,$xs}{
+            padding: 45px 20px 35px 20px;
+        }
+        & p {
+            margin-bottom: 0;
+            transition: .3s;
+        }
+        &:hover {
+            background-color: var(--it-common-red);
+            & .it-feature-4-icon  {
+                color: var(--it-common-white);
+            }
+            & .it-feature-4-title  {
+                color: var(--it-common-white);
+            }
+            & p {
+                color: var(--it-common-white);
+            }
+        }
+    }
+}

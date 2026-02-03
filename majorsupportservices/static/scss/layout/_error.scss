@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  08. error css start
+/*----------------------------------------*/
+.it-error {
+    &-thumb {
+        @media #{$md,$xs}{
+            margin-bottom: 30px;
+        }
+    }
+    &-content {
+        & .it-section-title {
+            font-weight: 800;
+            font-size: 45px;
+            color: #000;
+            margin-bottom: 48px;
+            @media #{$md}{
+                font-size: 39px;
+            }
+            @media #{$xs}{
+                font-size: 31px;
+            }
+        }
+    }
+    &-area {
+        @media #{$md,$xs}{
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  15. map css start
+/*----------------------------------------*/
+.it-map-box{
+    line-height: 0;
+    & iframe {
+        width: 100%;
+        height: 480px;        
+        @media #{$lg,$md,$xs}{
+            height: 350px;
+        }
+    }
+}

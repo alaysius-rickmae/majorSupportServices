@@ -1,0 +1,251 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  18. portfolio css start
+/*----------------------------------------*/
+
+.it-portfolio {
+    &-bg {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 57%;
+            width: 100%;
+            z-index: -2;
+            background-color: #F2EBE9;
+        }
+    }
+    &-content {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-right: 75px;
+        border-radius: 0 0 4px 4px;
+        background-color: var(--it-common-white);
+        position: relative;
+        z-index: 1;
+        @media #{$xl,$lg,$md,$xs} {
+            padding-right: 55px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 24%;     
+            z-index: -1;     
+            background-color: #F2F3F5;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 0%;
+            transition: .3s;            
+            background-color: var(--it-common-red);
+        }
+    }
+    &-thumb {
+        border-radius: 4px 4px 0 0;
+        & img {
+            border-radius: 4px 4px 0 0;
+        }
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 5px;
+        font-family: var(--it-ff-body);
+        @media #{$xl,$lg,$md,$xs} {
+            font-size: 18px;
+        }
+    }
+    &-arrow {
+        & a {
+            position: relative;
+            z-index: 1;
+            border-radius: 4px;
+            padding: 11px 17px;
+            display: inline-block;
+            transition: .3s;
+            background-color: var(--it-common-red);
+        }
+    }
+    &-item {
+        &:hover {
+            & .it-portfolio-content {
+                &::before {
+                    width: 24%;
+                }
+            }
+            & .it-portfolio-arrow {
+                & a {
+                    background-color: var(--it-common-black);
+                }
+            }
+        }
+    }
+    &-btn {
+        @media #{$md,$xs} {
+            margin-top: 30px;
+        }
+    }
+    &-active {
+        margin-right: -440px;
+        @media #{$xxl}{
+            margin-right: -250px;
+        }
+        @media #{$xl,$lg,$md,$xs}{
+            margin-right: 0;
+        }
+    }
+}
+.it-portfolio-details {
+    &-wrap {
+        background-color: #F2EBE9;
+        & .it-portfolio-details-content {
+            padding: 60px 75px;
+            padding-right: 85px;
+            @media #{$lg}{
+                padding: 40px 35px;
+            }
+            @media #{$md}{
+                padding: 50px 55px;
+            }
+            @media #{$xs}{
+                padding: 40px 25px;
+            }
+        }
+        & .it-portfolio-details-thumb {
+            height: 100%;
+            margin-right: -30px;
+            @media #{$md,$xs}{
+               margin-right: 0;
+            }
+            & img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-thumb {
+        & img {
+            border-radius: 10px;
+            @media #{$md,$xs}{
+                width: 100%;
+            }
+        }
+    }
+    &-content {
+        &-info {
+            & span {
+                font-weight: 500;
+                font-size: 20px;
+                display: block;
+                color: var(--it-common-black);
+                font-family: var(it-ff-plus-jakarta);
+                @media #{$lg,$md,$xs}{
+                    font-size: 16px;
+                }
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                & a {
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #5E5F62;
+                    display: inline-block;
+                    margin-left: 3px;
+                    transition: .3s;
+                    &:hover {
+                        color: var(--it-common-red);
+                    }
+                    @media #{$lg,$md,$xs}{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            color: #5E5F62;
+            @media #{$lg,$md,$xs}{
+                font-size: 14px;
+            }
+        }
+        &.content-mr {
+            margin-right: 50px;
+            @media #{$md,$xs}{
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+        }
+        &.content-ml {
+            margin-left: 30px;
+            @media #{$md,$xs}{
+                margin-left: 0;
+                margin-top: 50px;
+            }
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 45px;
+        text-transform: capitalize;
+        color: #1f0723;
+        @media #{$xl}{
+            font-size: 37px;
+        }
+        @media #{$lg,$md}{
+            font-size: 35px;
+        }
+        @media #{$xs}{
+            font-size: 30px;
+        }
+    }
+    &-list {
+        & ul {
+            & li {
+                position: relative;
+                list-style: none;
+                padding-left: 30px;
+                &:not(:last-child){
+                    margin-bottom: 21px;
+                    @media #{$xs}{
+                        margin-bottom: 15px;
+                    }
+                    @media #{$sm}{
+                        margin-bottom: 20px;
+                    }
+                }
+                @media #{$xs}{
+                    margin-bottom: 15px;
+                }
+                @media #{$sm}{
+                    margin-bottom: 20px;
+                }
+                & span {
+                    font-weight: 500;
+                    font-size: 20px;
+                    font-family: var(--it-ff-heading);
+                    @media #{$lg,$md,$xs}{
+                        font-size: 16px;
+                    }
+                    & i {
+                        position: absolute;
+                        color: var(--it-common-red);
+                        top: 2px;
+                        left: 0;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

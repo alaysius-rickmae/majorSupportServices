@@ -1,0 +1,211 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  07. cta css start
+/*----------------------------------------*/
+.it-cta {
+    &-ptb {
+        padding-top: 125px;
+        padding-bottom: 295px;
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background-color: rgba($color: #121012, $alpha: .7);
+
+        }
+    }
+    &-btn {
+        @media #{$md,$xs}{
+            margin-top: 30px;
+        }
+    }
+    &-shape {
+        &-1 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            height: 100%;
+            opacity: .3;
+            & img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-2 {
+            position: absolute;
+            bottom: 29%;
+            right: 4%;
+            z-index: -1;
+            animation: spin 3000ms forwards infinite alternate;
+            transform-origin: bottom left;
+        }
+    }
+}
+.it-cta-4 {
+    &-title {
+        font-weight: 700;
+        font-size: 45px;
+        margin-bottom: 0;
+        font-family: var(--it-ff-body);
+        color: var(--it-common-white);
+        @media #{$xl} {
+           font-size: 35px;
+        }
+        @media #{$lg} {
+           font-size: 30px;
+        }
+        @media #{$md,$xs} {
+           font-size: 27px;
+        }
+        @media #{$sm} {
+           font-size: 28px;
+            & br {
+                display: none;
+            }
+        }
+    }
+    &-ptb {
+        padding: 69px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-thumb {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 49%;
+        @media #{$xs} {
+            position: static;
+            width: 100%;
+            margin-top: 30px;
+        }
+        & img {
+            object-fit: cover;
+            height: 100%;        
+            border-left: 15px solid var(--it-common-white);    
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 12.5% 100%);
+            @media #{$xl,$lg,$md,$xs} {
+                border: none;
+            }
+            @media #{$xs} {
+                border: none;
+                border-left: none;    
+                clip-path: none;
+            }
+        }
+    }
+    &-icon {
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        transform: translateY(-50%);
+        display: inline-block;
+        height: 86px;
+        width: 86px;
+        border-radius: 50%;
+        line-height: 86px;
+        text-align: center;
+        z-index: 1;
+        transition: .3s;
+        color: var(--it-common-red);
+        background-color: var(--it-common-white);
+        @media #{$xl} {
+            left: -1%;
+        }
+        @media #{$lg,$md} {
+            left: -1%;
+            height: 65px;
+            width: 65px;
+            line-height: 64px;
+        }
+        @media #{$xs} {
+            display: none;
+        }
+        &:hover {
+            color: var(--it-common-white);
+            background-color: var(--it-common-black);
+        }
+    }
+}
+.it-cta-5 {
+    &-area {
+        margin-right: 290px;
+        @media #{$xxxl} {
+            margin-right: 100px;
+        }
+        @media #{$xxl} {
+            margin-right: 40px;
+        }
+        @media #{$xl,$lg} {
+            margin-right: 30px;
+        }
+        @media #{$md,$xs} {
+            margin-right: 0px;
+        }
+    }
+    &-thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
+        & img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    &-wrap {
+        padding: 33px 75px;
+        padding-left: 490px;
+        @media #{$xxl} {
+            padding-left: 420px;
+        }
+        @media #{$xl} {
+            padding-left: 365px;
+            padding-right: 40px;
+        }
+        @media #{$lg} {
+            padding-left: 340px;
+            padding-right: 40px;
+        }
+        @media #{$md,$xs} {
+            padding: 33px 20px;
+        }
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 45px;
+        letter-spacing: -0.01em;
+        text-transform: capitalize;
+        color: var(--it-common-white);
+        @media #{$xxl} {
+            font-size: 35px;
+        }
+        @media #{$xl} {
+            font-size: 30px;
+        }
+        @media #{$lg} {
+            font-size: 24px;
+        }
+        @media #{$md} {
+            font-size: 25px;
+        }
+        @media #{$xs} {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        @media #{$sm} {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+}

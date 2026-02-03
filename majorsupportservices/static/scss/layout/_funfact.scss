@@ -1,0 +1,147 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. funfact css start
+/*----------------------------------------*/
+.it-funfact {
+    &-icon {
+        display: inline-block;
+        height: 90px;
+        width: 90px;
+        line-height: 82px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: var(--it-common-white);
+        @media #{$xl,$lg,$md,$xs}{
+            height: 75px;
+            width: 75px;
+            line-height: 65px;
+        }
+    }
+    &-title {
+        font-weight: 700;
+        font-size: 45px;
+        text-transform: capitalize;
+        color: var(--it-common-white);
+        margin-bottom: 2px;
+        font-family: var(--it-ff-plus-jakarta);
+        @media #{$xl,$lg,$md,$xs}{
+            font-size: 35px;
+        }
+        & i {
+            font-style: normal;
+        }
+    }
+    &-content {
+        & span {
+            font-weight: 500;
+            font-size: 25px;
+            text-transform: capitalize;
+            color: var(--it-common-white);
+            @media #{$xl,$lg,$md,$xs}{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.it-funfact-2{
+    &-item{        
+        @media #{$lg} {
+            text-align: center;
+        }
+        @media #{$md} {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        @media #{$xs} {
+            margin-bottom: 50px;
+            justify-content: center;
+            text-align: center;
+        }
+        & h4{
+            font-weight: 500;
+            font-size: 70px;
+            line-height: 0.7;
+            margin-bottom: 10px;
+            color: var(--it-common-white);
+            @media #{$xxl} {
+                font-size: 52px;
+            }
+            @media #{$xl} {
+                font-size: 45px;
+            }
+            @media #{$lg,$md,$xs} {
+                font-size: 52px;
+            }
+            & i {
+                font-style: normal;
+            }
+        }
+        & span{
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: var(--it-common-white);
+            font-family: var(--it-ff-plus-jakarta);
+            @media #{$xxl,$xl} {
+                font-size: 19px;
+            }
+            @media #{$lg,$md} {
+                font-size: 15px;
+            }
+            @media #{$xs} {
+                font-size: 19px;
+            }
+        }
+        &.item-style {
+            &-2 {
+                padding-left: 40px;
+                @media #{$lg} {
+                    padding-left: 20px;
+                }
+                @media #{$xs} {
+                    padding-left: 0;
+                }
+            }
+            &-3 {
+                padding-left: 100px;
+                @media #{$lg} {
+                    padding-left: 70px;
+                }
+                @media #{$xs} {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    &-ptb{
+        padding: 50px 280px;
+        padding-right: 100px;
+        margin-right: 641px;
+        @media #{$xxxl}{
+            padding: 50px 130px;
+            padding-right: 50px;
+            margin-right: 538px;
+        }
+        @media #{$xxl}{
+            padding: 50px 130px;
+            padding-right: 50px;
+            margin-right: 472px;
+        }
+        @media #{$xl}{
+            padding: 50px 70px;
+            padding-right: 20px;
+            margin-right: 403px;
+        }
+        @media #{$lg,$md,$xs}{
+            padding: 50px 0px;
+            margin-right: 0;
+        }
+        & .it-funfact-2-item {
+            @media #{$md}{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

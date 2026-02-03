@@ -1,0 +1,15 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet';
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Inter', sans-serif",
+        'heading': "'Anek Bangla', sans-serif",
+        'space-grotesk': "'Space Grotesk', sans-serif",
+        'plus-jakarta': "'Plus Jakarta Sans', sans-serif",
+        'sora': "'Sora', sans-serif",
+        'fontawesome':"Font Awesome 6 Pro",
+    )
+);

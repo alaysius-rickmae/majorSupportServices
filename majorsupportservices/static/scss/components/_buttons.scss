@@ -1,0 +1,72 @@
+@use '../utils' as *;
+
+.it-btn {
+	&-red {
+		font-size: 15px;
+		font-weight: 500;
+		display: inline-block;
+		border-radius: 5px;
+		padding: 21px 40px;
+		text-align: center;
+		transition: .4s;
+		text-transform: capitalize;
+		color: var(--it-common-white);
+		background-color: var(--it-common-red);
+		&.black-btn {
+			background-color: var(--it-theme-1);
+			&:hover {
+				color: var(--it-common-white);
+				background-color: var(--it-common-red);			
+			}
+		}
+		&.white-btn {
+			color: var(--it-common-black);
+			background-color: var(--it-common-white);
+			&:hover {
+				color: var(--it-common-white);
+				background-color: var(--it-common-red);			
+			}
+		}
+		@media #{$lg,$md,$xs}{
+			font-size: 14px;
+			padding: 15px 25px;
+		}
+		&:hover {
+			color: var(--it-common-red);
+			background-color: var(--it-common-white);			
+		}
+		&.hover-2 {
+			&:hover {
+				color: var(--it-common-white);
+				background-color: var(--it-theme-1);
+			}
+		}
+	}
+	&-sm {
+		font-weight: 500;
+		font-size: 15px;
+		display: inline-block;
+		border-radius: 5px;
+		padding: 10.5px 30px;
+		text-align: center;
+		transition: 0.3s;
+		background-color: #F2EBE9;
+		color: var(--it-common-black);
+		@media #{$lg,$md,$xs}{
+			font-size: 14px;
+			padding: 10px 20px;
+		}
+		&:hover {
+			color: var(--it-common-white);
+			background-color: var(--it-theme-1);
+		}
+		&.theme-bg {
+			background-color: var(--it-theme-1);
+			color: var(--it-common-white);
+			&:hover {
+				color: var(--it-common-white);
+				background-color: var(--it-common-red);
+			}
+		}
+	}
+}
