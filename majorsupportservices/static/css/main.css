@@ -58,13 +58,16 @@
   --it-common-white: #ffffff;
   --it-common-black: #1F0723;
   --it-common-red: #DC1D1C;
-  --it-common-yellow: #eeee17;;
+  --it-common-yellow: #eeee17;
+  --it-common-blue: #2077db;
   --it-heading-primary: #1F0723;
   --it-gray-1: #F2EBE9;
   --it-gray-2: #F3F3F3;
   --it-gray-3: #F2F6F9;
   --it-text-body: #5E5F62;
   --it-theme-1: #a91596;
+  --it-theme-2: #f3dc08;
+
 }
 
 @media (min-width: 1400px) {
@@ -519,8 +522,8 @@ input[type=color] {
   text-align: center;
   transition: 0.4s;
   text-transform: capitalize;
-  color: var(--it-common-black);
-  background-color: var(--it-common-yellow);
+  color: var(--it-common-white);
+  background-color: var(--it-common-blue);
 }
 .it-btn-red.black-btn {
   background-color: var(--it-theme-1);
@@ -920,7 +923,7 @@ input[type=color] {
 
 /*--- preloader ---*/
 .dark #preloader {
-  background-color: var(--it-theme-1);
+  background-color: var(--it-common-blue);
 }
 
 #preloader {
@@ -953,7 +956,7 @@ input[type=color] {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  background: var(--it-theme-1);
+  background: var(--it-common-blue);
   -webkit-animation: preloader 1.3s linear infinite;
   animation: preloader 1.3s linear infinite;
 }
@@ -4436,7 +4439,7 @@ body.it-magic-cursor #magic-cursor {
   top: 1px;
   left: 0;
   font-size: 20px;
-  color: var(--it-common-red);
+  color: var(--it-common-white);
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .it-header-top-list-box ul li span svg, .it-header-top-list-box ul li span i {
@@ -4480,7 +4483,7 @@ body.it-magic-cursor #magic-cursor {
   }
 }
 .it-header-top-social-box a:hover {
-  color: var(--it-common-red);
+  color: var(--it-common-white);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
@@ -4511,7 +4514,7 @@ body.it-magic-cursor #magic-cursor {
   font-size: 16px;
   padding: 26px 0;
   display: inline-block;
-  color: var(--it-common-white);
+  color: var(--it-common-black);
   display: inline-block;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -4524,7 +4527,7 @@ body.it-magic-cursor #magic-cursor {
   padding-right: 12px;
   position: relative;
   border-radius: 10px 10px 0 0;
-  background-color: var(--it-common-red);
+  background-color: var(--it-theme-2);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .it-header-wrap {

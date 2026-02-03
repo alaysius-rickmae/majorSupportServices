@@ -11,7 +11,7 @@
 
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="static/img/logo/favicon.png">
+   <link rel="shortcut icon" type="image/x-icon" href="static/img/logo/logo.png">
 
    <!-- CSS here -->
    <link rel="stylesheet" href="static/css/bootstrap.min.css">
@@ -55,7 +55,7 @@
                <div class="search__wrapper">
                   <div class="search__top d-flex justify-content-between align-items-center">
                      <div class="search__logo">
-                        <a href="index.html">
+                        <a href="{{url_for('index.dashboard')}}">
                            <img src="static/img/logo/logo-red.png" alt="">
                         </a>
                      </div>
@@ -233,9 +233,9 @@
             <div class="container">
                <div class="it-header-wrap">
                   <div class="row align-items-center">
-                     <div class="col-xxl-2 col-xl-2 col-6">
+                     <div class="col-xxl-2 col-xl-2 col-6"> 
                         <div class="it-header-logo">
-                           <a href="index.html"><img src="static/img/logo/logo-white.png" alt=""></a>
+                           <a href="{{ url_for('index.dashboard') }}"><img src="static/img/logo/logo_circleback.png" alt="Major Support Services Logo" style="width:75px;height:70px"></a>
                         </div>
                      </div>
                      <div class="col-xxl-7 col-xl-7 d-none d-xl-block">
@@ -283,8 +283,8 @@
                                  <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                               </svg>
                            </button>
-                           <a href="contact.html" class="it-btn-red hover-2 d-none d-lg-block">
-                              Create An Account
+                           <a href="{{ url_for('contact.index') }}" class="it-btn-red hover-2 d-none d-lg-block">
+                              Book an Appointment
                            </a>
                            <div class="it-header-bar d-xl-none">
                               <button class="it-menu-bar">
@@ -333,7 +333,7 @@
                                        Navigating NDIS with care, every step.
                                     </h1>
                                     <div class="it-slider-btn">
-                                       <a class="it-btn-red" href="contact.html">Book An Appointment</a>
+                                       <a class="it-btn-red" href="contact.html">Referral Someone Now.</a>
                                     </div>
                                  </div>
                               </div>
