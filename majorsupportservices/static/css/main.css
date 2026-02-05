@@ -1597,7 +1597,7 @@ input[type=color] {
   width: 100%;
   height: 48%;
   z-index: 9999999;
-  background-color: var(--it-theme-1);
+  background-color: var(--it-common-yellow);
   -webkit-transform: translateY(calc(-100% - 80px));
   -moz-transform: translateY(calc(-100% - 80px));
   -ms-transform: translateY(calc(-100% - 80px));
@@ -1664,8 +1664,8 @@ input[type=color] {
   border: 0;
   outline: 0;
   font-size: 24px;
-  color: var(--it-common-white);
-  border-bottom: 1px solid transparent;
+  color: var(--it-common-black);
+  border-bottom: 1px solid var(--it-common-black);
   padding: 0;
   padding-right: 30px;
 }
@@ -1695,7 +1695,7 @@ input[type=color] {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 18px;
-  color: var(--it-common-white);
+  color: var(--it-common-black);
 }
 .search__input .search-input-field ~ .search-focus-border {
   position: absolute;
