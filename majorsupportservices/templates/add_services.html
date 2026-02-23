@@ -1,0 +1,232 @@
+{% extends "admin.html" %}
+
+{% set active_page = "restrictions" %}
+{% set my_name = fullname %}
+{% set user_type = user_type %}
+
+{% block title %} Maintenance {% endblock %}
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<div class="pagetitle">
+    <h1>Maintenance</h1>
+
+</div><!-- End Page Title -->
+<div class="section">
+    <div class="col-md-12">
+        <div class="card">
+            <table class="food_reco_tbl_list" id="food_reco_tbl_list" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Date Added</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                <tbody style="width:100%;">
+                    <tr>
+                        <td>10</td>
+                        <td>010</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+</div>
+
+
+<!-- Create Restrictions / Allergy Modal -->
+<!-- <div class="modal fade" id="restrictions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Restrictions:</b></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </button>
+            </div>  
+            <div class="modal-body">
+                <div class="row justify-content-center mt-3">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label fw-bold">Restriction's Category:</label>
+                            <select class="form-select address_restriction_cat" id="address_restriction_cat" name="restrict_cat[]"  placeholder="Choose Option" >
+                               <option selected disabled>Choose restriction category</option>
+                                <option value="Allergy">Allergy</option>
+                                <option value="Cultural/Religious">Cultural/Religious</option>
+                            </select>
+                        </div>
+                        <div class="form-group mt-4">
+                            <label class="form-label fw-bold">Restriction's Name:</label>
+                            <select class="form-select" id="restriction_name" placeholder="Choose Restriction's Name">
+                               <option value="Choose restriction's name" disabled selected>Choose restriction's name</option>
+                               <option value="Milk">Milk</option>
+                               <option value="Eggs">Eggs</option>
+                               <option value="Fish">Fish</option>
+                               <option value="Crustacean shellfish">Crustacean shellfish</option>
+                               <option value="Tree nuts">Tree nuts</option>
+                               <option value="Peanuts">Peanuts</option>
+                               <option value="Wheat">Wheat</option>
+                               <option value="Soybean">Soybean</option>
+                               <option value="Sesame">Sesame</option>
+                               <option value="Pork">Pork</option>
+                               <option value="Beef">Beef</option>
+                               <option value="Blood">Blood</option>
+                               <option value="Coffee">Coffee</option>
+                               <option value="Tea">Tea</option>
+                               <option value="Alcohol">Alcohol</option>
+                               <option value="None">None</option>
+                            </select>
+                        </div>          
+                        <div class="form-group mt-5 restriction_allergy_lst d-none">
+                            <div class="card border">
+                                <div class="card-body">
+                                   <div class="row">
+                                     <div class="col restriction_category">
+                                        <table class="restriction_category">
+                                        <thead>
+                                            <tr>
+                                                <th>Restriction's Category</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="rstriction_cat"></td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                     </div>
+                                     <div class="col restriction_name">
+                                        <table class="restriction_name">
+                                        <thead>
+                                            <tr>
+                                                <th>Restriction's Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="rstriction_name"></td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                     </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>             
+                        <div class="mt-4 pt-2">
+                            <button class="btn btn-secondary btn-lg" data-bs-dismiss="modal" type="button">Close</button>
+                            <button class="btn btn-primary btn-lg btn_save_restrictions" type="button">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+    $(function(){
+        restrictionListTbl = $('#restrictionListTbl').DataTable({
+            pageLength: 10
+        })
+
+        //pop up modal for creating new restrictions / allergy
+        $('.add-new-restrictions').click(function(){
+            $('#restrictions').modal('show')
+        })
+
+        //onChange function in restriction's category
+        $('#address_restriction_cat').change(function(){
+            var restrict_cat = $('#address_restriction_cat option:selected').text()
+
+            $('.restriction_allergy_lst').removeClass('d-none')
+            $('.rstriction_cat').append('<tr><td>' + restrict_cat + '</td></tr>');
+        })
+
+        //onChange function in restriction's name
+        $('#restriction_name').change(function(){
+            var restrict_name = $('#restriction_name option:selected').text()
+            $('.rstriction_name').append('<tr><td class="restrict_name_lst">' + restrict_name + '</td></tr>');
+        })
+
+
+        //save restrictions
+        $('.btn_save_restrictions').click(function(){
+            let restrict_arry = []
+            let restriction_cat = $('#address_restriction_cat option:selected').val()
+            let restriction_name = $('#restriction_name option:selected').val()
+
+            $('.restrict_name_lst').each(function() {
+                restrict_arry = restrict_arry + $(this).text() + ';'
+            });
+            restrict_arry = restrict_arry.toString().substr(0,restrict_arry.length -1);
+            let restrict_arry_name = restrict_arry.split(';')
+
+            $.ajax({
+                url:'/save_restrictions',
+                data: JSON.stringify ({restriction_cat:restriction_cat,
+                    restriction_name: restrict_arry_name}),
+                contentType: 'application/json',
+                type: 'POST',
+                success:function(response){
+                  Swal.fire('Successfully added!', '', 'success').then((result) => {
+                        if(result.isConfirmed){
+                            location.reload()
+                        }
+                    })
+                }
+            })
+        })
+
+
+        //delete restrictions
+        $('.btn-delete-restrictions').click(function(){
+            var id = $(this).attr('data-id')
+            Swal.fire({
+                title: 'Are you sure to delete this user?',
+                showDenyButton: true,
+                confirmButtonText: 'Yes',
+                denyButtonText: 'No',
+                text: '',
+                icon: 'info'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    $.ajax({
+                        url:'/delete_restrictions',
+                        data: JSON.stringify({
+                            id: id
+                        }),
+                        contentType: 'application/json',
+                        type: 'POST',
+                        success:function(response){
+                            Swal.fire('Successfully deleted!', '', 'success').then((result) => {
+                                if(result.isConfirmed){
+                                    location.reload()
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+        })
+
+
+    })
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+

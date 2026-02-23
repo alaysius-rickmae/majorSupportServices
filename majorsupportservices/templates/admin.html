@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADDReSS - Nutrition Dashboard</title>
+
+    <!-- Bootstrap CSS (added) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> -->
+
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/recipes-styles.css')}}" rel="stylesheet">
+    <!-- <link href="{{url_for('static', filename='css/admin.css')}}" rel="stylesheet"> -->
+    <!-- External Font Awesome Icons - CDN dependency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />    
+</head>
+
+<body>
+    
+    <nav class="sidebar">
+        {% set active_page = active_page|default('index') -%}
+        <div class="sidebar-header">
+            <!-- Organization Branding - Static Content -->
+            <div class="organization">
+                <!-- <img src="" alt="DOST Logo" class="dost-logo"> -->
+                <span class="dost-text">DOST-FNRI</span>
+            </div>
+            <div class="divider"></div>
+            <!-- Application Logo and Title - Static Content -->
+            <div class="logo">
+                <a href="">
+                    <!-- <img src="" alt="ADDReSS Logo" class="address-logo"> -->
+                </a>
+                <div class="logo-content">
+                    <span class="logo-text">ADDReSS</span>
+                    <span class="logo-subtitle">Automated Diet Decoder and Recommender System Software</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar-content">
+            
+
+            {% set my_name = my_name|default('Your Name') -%}
+            <!-- 
+            ===========================================
+            NAVIGATION MENU
+            ===========================================
+            Main navigation items for different sections of the app.
+            BACKEND INTEGRATION NOTES:
+            - Active state should be managed dynamically based on current page
+            - Navigation items should trigger page/content switching via JavaScript
+            - Consider adding data attributes for easier JavaScript targeting
+            -->
+            
+            <div class="nav-section">
+                <div class="nav-item" data-page="dashboard" id='dashboard-page' data-url="">
+                    <i class="fas fa-home nav-icon"></i>
+                    <span class="nav-label">Dashboard</span>
+                </div>
+            </div>
+            
+            <!-- 
+            ===========================================
+            USER PROFILE SECTION
+            ===========================================
+            Displays current user information in the sidebar.
+            BACKEND INTEGRATION NOTES:
+            - User name should be fetched from user session/profile API
+            - User status/role should be dynamic (Member, Admin, etc.)
+            - Avatar could be user-uploaded image or default icon
+            - Consider adding click handler for profile dropdown/settings
+            -->
+            <div class="sidebar-footer">
+                <div class="user-profile" data-url="">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-info">
+                        <!-- TODO: Replace with dynamic user data from API -->
+                        <div class="user-name">{{userLogged}}</div>
+                        <div class="user-status">{{role_name}}</div>
+                       
+                        <div class="sign-out">
+                            <a href="">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <div class="welcome-section">
+                    <!-- TODO: Replace with dynamic user name from API -->
+                    <h1 class="welcome-title welcome-back">Welcome back, {{ my_name }}!</h1>
+                    <!-- TODO: Personalize based on user goals/preferences -->
+                    <p class="welcome-subtitle welcome-desc">Let's track your nutrition journey today</p>
+                </div>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+    </div>
+    <nav class="bottom-nav">
+        <!-- TODO: Add click handlers for navigation -->
+        <div class="user-profile dropdown" data-url="">
+            <div class="user-avatar dropdown-toggle" onclick="toggleUserDropdown()">
+                <i class="fas fa-user"></i>
+            </div>
+           
+            <div class="dropdown-menu" id="userDropdownMenu">
+                <div class="dropdown-item">
+                    <a href="">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sign Out</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="nav-item {% if active_page == 'index' %} active {%else%} {% endif %}" data-page="dashboard" id="dashboard-page-mobile" data-url="{{url_for('index.dashboard')}}">
+            <i class="fas fa-home nav-icon"></i>
+            <span class="nav-label">Dashboard</span>
+        </div>
+    </nav>
+
+
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+    <script src="static/js/script.js"></script>
+   
+    
+</body>
+
+</html>
