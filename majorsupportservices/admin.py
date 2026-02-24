@@ -12,10 +12,12 @@ admin = Blueprint('admin', __name__)
 
 @admin.route('/admin', methods=['GET', 'POST'])
 def index():
-    if request.method == 'POST':
-        # Get the form data
-        name = request.form['name']
-        # Add your processing logic here
-        print(name)
+   
+    username = session['user']
+    fullname = session['fullname']
+    user_type = session['user_type']
+    userLogged = session['fullname']
 
-    return render_template('admin.html')
+    return render_template('admin.html', 
+            fullname=fullname,user_type=user_type,
+            userLogged=userLogged,username=username)

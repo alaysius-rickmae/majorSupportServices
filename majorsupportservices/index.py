@@ -10,8 +10,6 @@ def dashboard():
     return render_template('index.html')
 
 
-
-    
 @index.errorhandler(404)
 def invalid_route(e):
 

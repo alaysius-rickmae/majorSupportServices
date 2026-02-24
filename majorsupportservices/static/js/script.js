@@ -634,10 +634,21 @@ window.addEventListener('resize', function() {
         dashboardTab.addEventListener('click', function() {
             let dashboardUrl = this.getAttribute('data-url');
             window.open(dashboardUrl, '_self');
+            console.log('tested')
         });
         dashboardTab.style.cursor = 'pointer';
     }
-
+    //Add click event listener to Services nav item (DESKTOP UI)
+    const servicesTab = document.getElementById('services-page');
+    if(servicesTab) {
+        servicesTab.addEventListener('click', function() {
+            let servicesUrl = this.getAttribute('data-url');
+            window.open(servicesUrl, '_self');
+            console.log('tested')
+        });
+        servicesTab.style.cursor = 'pointer';
+    }
+    
     //Add click event listener to Profile nav item (DESKTOP UI)
     const profileTab = document.getElementById('profile-page');
     if(profileTab) {
